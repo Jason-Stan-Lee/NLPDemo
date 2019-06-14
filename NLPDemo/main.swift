@@ -8,6 +8,8 @@
 
 import Foundation
 
+print("----------------------- NLP ------------------------")
+
 let nlp = NLP()
 // 语言区分
 nlp.determineLanguage(for: nlp.quote)
@@ -19,3 +21,11 @@ nlp.lemmatization(for: nlp.quote)
 nlp.partsOfSpeech(for: nlp.quote)
 // 命名实体识别
 nlp.namedEntityRecognition(for: nlp.quote)
+
+print("------------------- NLPCreateML ---------------------")
+
+let nlpCreateML = NLPCreateML()
+nlpCreateML.createML()
+nlpCreateML.prediction("Feels so good!")
+// Save model if you feels good
+// nlpCreateML.saveModel(toFile: "file")

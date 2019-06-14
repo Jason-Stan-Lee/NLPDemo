@@ -9,17 +9,21 @@
 /* Begin PBXBuildFile section */
 		A1029ED62297B97300BC28A2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1029ED52297B97300BC28A2 /* main.swift */; };
 		A1029EDD2297B99E00BC28A2 /* NLP.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1029EDC2297B99E00BC28A2 /* NLP.swift */; };
+		A12BA1D822B36D2900588EDA /* NLPCreateML.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12BA1D722B36D2900588EDA /* NLPCreateML.swift */; };
+		A142BE7622B38E0E001A31E3 /* NLPCreateMLData.csv in Copy Files */ = {isa = PBXBuildFile; fileRef = A142BE7322B38853001A31E3 /* NLPCreateMLData.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		A1029ED02297B97300BC28A2 /* CopyFiles */ = {
+		A1029ED02297B97300BC28A2 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = resources;
+			dstSubfolderSpec = 7;
 			files = (
+				A142BE7622B38E0E001A31E3 /* NLPCreateMLData.csv in Copy Files */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -27,6 +31,8 @@
 		A1029ED22297B97300BC28A2 /* NLPDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NLPDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1029ED52297B97300BC28A2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A1029EDC2297B99E00BC28A2 /* NLP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLP.swift; sourceTree = "<group>"; };
+		A12BA1D722B36D2900588EDA /* NLPCreateML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLPCreateML.swift; sourceTree = "<group>"; };
+		A142BE7322B38853001A31E3 /* NLPCreateMLData.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = NLPCreateMLData.csv; path = NLPDemo/NLPCreateMLData.csv; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,8 @@
 			children = (
 				A1029ED52297B97300BC28A2 /* main.swift */,
 				A1029EDC2297B99E00BC28A2 /* NLP.swift */,
+				A12BA1D722B36D2900588EDA /* NLPCreateML.swift */,
+				A142BE7322B38853001A31E3 /* NLPCreateMLData.csv */,
 			);
 			path = NLPDemo;
 			sourceTree = "<group>";
@@ -74,7 +82,7 @@
 			buildPhases = (
 				A1029ECE2297B97300BC28A2 /* Sources */,
 				A1029ECF2297B97300BC28A2 /* Frameworks */,
-				A1029ED02297B97300BC28A2 /* CopyFiles */,
+				A1029ED02297B97300BC28A2 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -123,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1029EDD2297B99E00BC28A2 /* NLP.swift in Sources */,
+				A12BA1D822B36D2900588EDA /* NLPCreateML.swift in Sources */,
 				A1029ED62297B97300BC28A2 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

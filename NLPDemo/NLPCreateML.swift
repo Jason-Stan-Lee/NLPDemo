@@ -18,7 +18,8 @@ class NLPCreateML {
         guard let filePath = Bundle.main.path(forResource: "NLPCreateMLData", ofType: "csv", inDirectory: "resources") else {
             return nil
         }
-        return URL(string: filePath)
+        
+        return URL(fileURLWithPath: filePath)
     }()
 
     private var classfier: MLTextClassifier?
@@ -32,13 +33,22 @@ class NLPCreateML {
 
         let data: TrainingData = allData.randomSplit(by: 0.9)
 
-        guard let classfier = try? MLTextClassifier(trainingData: data.trainingData, textColumn: "text", labelColumn: "class") else {
-            return
+        if #available(OSX 10.15, *) {
+            guard let classfier = try? MLTextClassifier(trainingData: data.trainingData, textColumn: "text", labelColumn: "class", parameters: MLTextClassifier.ModelParameters()) else {
+                return
+            }
+            let metrics = classfier.evaluation(on: data.testData, textColumn: "text", labelColumn: "class")
+            print("classificationError: \(String(describing: metrics.classificationError))")
+            self.classfier = classfier
+        } else {
+            guard let classfier = try? MLTextClassifier(trainingData: data.trainingData, textColumn: "text", labelColumn: "class") else {
+                 return
+            }
+            let metrics = classfier.evaluation(on: data.testData, textColumn: "text", labelColumn: "class")
+            print("classificationError: \(String(describing: metrics.classificationError))")
+            self.classfier = classfier
         }
 
-        let metrics = classfier.evaluation(on: data.testData)
-        print("classificationError: \(String(describing: metrics.classificationError))")
-        self.classfier = classfier
     }
 
     // 预测数据

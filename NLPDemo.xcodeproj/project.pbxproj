@@ -32,6 +32,7 @@
 		A1029ED52297B97300BC28A2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A1029EDC2297B99E00BC28A2 /* NLP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLP.swift; sourceTree = "<group>"; };
 		A12BA1D722B36D2900588EDA /* NLPCreateML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLPCreateML.swift; sourceTree = "<group>"; };
+		A141691623741A680049A8D0 /* CreateML.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = CreateML.playground; path = "../../../../Library/Autosave Information/CreateML.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A142BE7322B38853001A31E3 /* NLPCreateMLData.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = NLPCreateMLData.csv; path = NLPDemo/NLPCreateMLData.csv; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -65,6 +66,7 @@
 		A1029ED42297B97300BC28A2 /* NLPDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A141691623741A680049A8D0 /* CreateML.playground */,
 				A1029ED52297B97300BC28A2 /* main.swift */,
 				A1029EDC2297B99E00BC28A2 /* NLP.swift */,
 				A12BA1D722B36D2900588EDA /* NLPCreateML.swift */,

@@ -8,6 +8,7 @@
 
 import Cocoa
 import CreateML
+import CreateML
 
 class NLPCreateML {
 
